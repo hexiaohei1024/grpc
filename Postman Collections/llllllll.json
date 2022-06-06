@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "75815501-e9eb-4bf1-9473-cefca1912523",
-		"name": "演示项目",
+		"name": "HTTP接口",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
