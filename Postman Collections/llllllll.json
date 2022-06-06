@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "75815501-e9eb-4bf1-9473-cefca1912523",
+		"name": "演示项目",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GraphQL&SOAP",
+			"item": [
+				{
+					"name": "Github GraphQL API",
+					"id": "ac628f4a-1d8e-4f38-9d34-87561318bbd5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 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",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  viewer {\n    login,\n    avatarUrl,\n    bio,\n    commitComments{\n      totalCount\n    }\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "https://api.github.com/graphql"
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP协议",
+					"id": "6aea6429-4bed-4f31-a2a9-5dc706763ee4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <ubiNum>500</ubiNum>\n    </NumberToWords>\n  </soap:Body>\n</soap:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+					},
+					"response": []
+				}
+			],
+			"id": "0efcec84-f7c2-4f05-959d-bc271fd517fb"
+		}
+	]
+}
